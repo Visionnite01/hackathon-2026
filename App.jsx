@@ -307,35 +307,9 @@ function MainPage({ setLoggedIn }) {
   return (
     <div className='mainPage' style={{ paddingBottom: 8 }}>
       <BrowserRouter>
-        <nav style={{
-          display: 'flex',
-          flexDirection: 'row-reverse',
-          alignItems: 'center',
-          background: 'rgba(100,180,100,0.15)',
-          borderBottom: '1px solid rgba(100,180,100,0.25)',
-          backdropFilter: 'blur(10px)',
-          padding: '12px 48px',
-          gap: 8,
-        }}>
-          <button onClick={handleLogout} style={{
-            fontFamily: 'Georgia, serif',
-            color: '#1b5e20',
-            fontSize: 14,
-            background: 'none',
-            border: '1px solid rgba(100,180,100,0.3)',
-            borderRadius: 20,
-            cursor: 'pointer',
-            padding: '6px 16px',
-            letterSpacing: '0.5px',
-          }}>Log out</button>
-          <Link to="/leaderboard" style={{
-            fontFamily: 'Georgia, serif',
-            color: '#1b5e20',
-            fontSize: 14,
-            textDecoration: 'none',
-            padding: '6px 16px',
-            letterSpacing: '0.5px',
-          }}>Leaderboard</Link>
+        <nav className='navBar'>
+          <button onClick={handleLogout} className='logoutButton'>Log out</button>
+          <Link to="/leaderboard" className='leaderboardButton'>Leaderboard</Link>
           <Link to="/" style={{
             fontFamily: 'Georgia, serif',
             color: '#1b5e20',
